@@ -21,6 +21,12 @@ export class QuoteComponent implements OnInit {
       this.quote[index].showDescription = !this.quote[index].showDescription;
   }
 
+  completeQuote(isComplete,index){
+    if (isComplete){
+        this.quote.splice(index,1);
+        }
+        }
+
   constructor() { }
 
   ngOnInit() {
