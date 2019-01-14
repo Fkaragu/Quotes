@@ -1,2 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.imgg {
+  background-image: url('./assets/cover.jpg');
+}
+.contt{
+  border: 2px solid grey;
+}
+.header {
+  font-size: 25px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+.footer {
+  font-size: 25px;
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
+}
+.fnt{
+  font-size: 18px;
+  font-family: sans-serif;
+}
+.detl{
+  margin: 10%
+}
+
+#sectioncX {
+  margin-left: 5%;
+  }
