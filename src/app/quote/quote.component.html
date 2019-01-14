@@ -7,32 +7,22 @@
     <div class="col-md-9 contt">
       <div *ngFor="let quotes of quote;let i = 'index'">
         <h4 class="fnt" id="{{i}}" appHighlightthrough>{{quotes.description}} due on {{quotes.completeDate|date}} </h4>
-
         <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Details</button>
-
-
         <div class="row" *ngIf="quotes.showDescription">
+          <br>
           <ul>
-
             <button (click)="upVote(i)">upVote</button>
             <br>
             <span>Total:{{quotes.upVote}}</span>
             <br>
-
             <button (click)="downVote(i)">downVote</button>
             <br>
             <span>Totals:{{quotes.downVote}}</span>
             <br>
-
           </ul>
           <app-quote-details [quote]='quotes' (isComplete)='deleteQuote($event,i)'></app-quote-details><br>
-
         </div>
       </div>
-
-
-
-
     </div>
     <div class="col-md-3 contt">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
