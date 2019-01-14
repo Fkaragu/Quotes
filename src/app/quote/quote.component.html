@@ -3,6 +3,6 @@
 <div *ngFor='let quotes of quote;let i = index'>
         <li  id="{{i}}" appHighlightthrough>{{quotes.name}} due on {{quotes.completeDate|date|uppercase}}</li>
     <button  (click)='toogleDetails(i)'>Toogle Details</button>
-<app-quote-details *ngIf="quotes.showDescription" [quote]='quotes' (isComplete)= 'completeQuote($event,i)'></app-quote-details>
+<app-quote-details *ngIf="quotes.showDescription" [quote]='quotes' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
 </div>
 </ul>
