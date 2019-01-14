@@ -9,12 +9,19 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quote = [
-    new Quote(1, 'Anonymous', 'I used to think i was indecisive but now im not too sure', new Date(2019, 1, 1)),
-    new Quote(2, 'Anonymous', 'Life is short smile while you still have teeth', new Date(2019, 1, 2)),
-    new Quote(3, 'Anonymous', 'Always remember that you are unique just like everyone else', new Date(2019, 1, 3)),
-    new Quote(4, 'Anonymous', 'People say nothing is impossible but i do nothing every day', new Date(2019, 1, 4)),
+    new Quote(1, 'Anonymous Writer', 'I used to think i was indecisive but now im not too sure', new Date(2019, 1, 1),0,0),
+    new Quote(2, 'Anonymous Writer', 'Life is short smile while you still have teeth', new Date(2019, 1, 2),0,0),
+    new Quote(3, 'Anonymous Writer', 'Always remember that you are unique just like everyone else', new Date(2019, 1, 3),0,0),
+    new Quote(4, 'Anonymous Writer', 'People say nothing is impossible but i do nothing every day', new Date(2019, 1, 4),0,0),
 
   ]
+
+  upVote(i){
+    this.quote[i].upVote +=1;
+  }
+  downVote(i){
+    this.quote[i].downVote -=1;
+  }
 
   addNewQuote(quote) {
     let quoteLength = this.quote.length;
