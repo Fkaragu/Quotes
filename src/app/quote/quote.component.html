@@ -1,10 +1,10 @@
-<h1>My Quote</h1>
+<h1>Interesting Quotes</h1>
 <hr>
 <div class="container">
   <div *ngFor="let quotes of quote;let i = 'index'">
 
       <h4 id="{{i}}" appHighlightthrough>{{quotes.name}} due on {{quotes.completeDate|date|uppercase}}</h4>
-      <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+      <button class="btn btn-primary" (click)='toogleDetails(i)'>Show Details</button>
       <div class="row" *ngIf="quotes.showDescription">
         <app-quote-details [quote]='quotes' (isComplete)='deleteQuote($event,i)'></app-quote-details>
       </div>
