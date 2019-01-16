@@ -1,5 +1,5 @@
 <div class="detl">
   <p>{{quote.name}}</p>
-  <p>Complete in {{quote.completeDate|dateCount}} days</p>
+  <p>Created on {{quote.completeDate|date}} ~ {{quote.completeDate|dateCount}} days have passed.</p>
   <button class="btn btn-danger" (click)='quoteDelete(true)'> Delete quote </button>
 </div>
